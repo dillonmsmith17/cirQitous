@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Enter Distance
+{% endblock %}
+
+{% block main %}
+    <form action="/distance" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="distance" placeholder="Distance" type="number" min="1" step=".5">
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="type" style="width:250px;" required>
+                <option disabled selected value="">Distance Type</option>
+                <option>Miles</option>
+                <option>Kilometers</option>
+            </select>
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Confirm</button>
+    </form>
+{% endblock %}

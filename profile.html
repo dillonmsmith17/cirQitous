@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+
+    <form action="/profile" method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <br>
+            <input autocomplete="off" autofocus class="form-control" name="new_username" placeholder="Username" type="text" required>
+            <div class="invalid-feedback">
+            Please choose a unique and valid username.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name">First and Last Name</label>
+            <br>
+            <input class="form-control" name="new_name" placeholder="First and Last Name" type="text" required>
+            <div class="invalid-feedback">
+            Please input your first and last name.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <br>
+            <input class="form-control" name="new_dob" type="date" required>
+            <div class="invalid-feedback">
+            Please input your Date of Birth.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="height">Height (inches)</label>
+            <br>
+            <input class="form-control" name="new_height" placeholder="Height (inches)" type="text" required>
+            <div class="invalid-feedback">
+            Please inout your height.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight (Pounds)</label>
+            <br>
+            <input class="form-control" name="new_weight" placeholder="Weight (lbs.)" type="text" required>
+            <div class="invalid-feedback">
+            Please input your weight.
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+
+{% endblock %}
